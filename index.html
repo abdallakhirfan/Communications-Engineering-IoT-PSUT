@@ -2,1437 +2,644 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Communications Engineering | PSUT</title>
-
-<!-- Bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Icons -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-
-<style>
-
-:root{
-    --primary:#0057b8;
-    --secondary:#00a6fb;
-    --dark:#071a3d;
-    --light:#f5f9ff;
-}
-
-
-html{
-    scroll-behavior:smooth;
-}
-
-
-body{
-    font-family:'Segoe UI', sans-serif;
-    background:var(--light);
-    color:#222;
-}
-
-
-/* Scroll progress */
-
-#progress{
-    position:fixed;
-    top:0;
-    left:0;
-    height:5px;
-    width:0%;
-    background:linear-gradient(90deg,var(--secondary),var(--primary));
-    z-index:9999;
-}
-
-
-/* Navbar */
-
-.navbar{
-    transition:.4s;
-}
-
-
-.navbar.scrolled{
-    background:white !important;
-    box-shadow:0 5px 20px rgba(0,0,0,.1);
-}
-
-
-.nav-link{
-    font-weight:500;
-}
-
-
-
-/* Hero */
-
-.hero{
-
-    min-height:100vh;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    text-align:center;
-    color:white;
-
-    position:relative;
-    overflow:hidden;
-
-    background:
-    linear-gradient(135deg,
-    #003b80,
-    #0077e6,
-    #00b4ff);
-
-}
-
-
-.hero h1{
-
-    font-size:clamp(3rem,7vw,5.5rem);
-    font-weight:800;
-
-}
-
-
-.hero p{
-
-    font-size:1.3rem;
-    max-width:750px;
-    margin:auto;
-
-}
-
-
-
-/* Floating circles */
-
-.circle{
-
-    position:absolute;
-    border-radius:50%;
-    background:rgba(255,255,255,.12);
-
-    animation:float 8s infinite ease-in-out;
-
-}
-
-
-.c1{
-
-    width:250px;
-    height:250px;
-    top:10%;
-    left:5%;
-
-}
-
-
-.c2{
-
-    width:350px;
-    height:350px;
-    bottom:-100px;
-    right:5%;
-
-}
-
-
-.c3{
-
-    width:120px;
-    height:120px;
-    top:30%;
-    right:20%;
-
-}
-
-
-
-@keyframes float{
-
-    50%{
-        transform:translateY(-30px);
-    }
-
-}
-
-
-
-/* Buttons */
-
-
-.btn-main{
-
-    background:white;
-    color:var(--primary);
-
-    border-radius:50px;
-
-    padding:14px 35px;
-
-    font-weight:bold;
-
-}
-
-
-.btn-main:hover{
-
-    background:#e8f4ff;
-
-}
-
-
-
-.btn-outline-light{
-
-    border-radius:50px;
-    padding:14px 35px;
-
-}
-
-
-
-/* Section styling */
-
-
-.section{
-
-    padding:90px 0;
-
-}
-
-
-.section-title{
-
-    text-align:center;
-    margin-bottom:50px;
-
-}
-
-
-.section-title h2{
-
-    font-size:2.5rem;
-    font-weight:800;
-    color:var(--dark);
-
-}
-
-
-.section-title p{
-
-    color:#666;
-
-}
-
-
-
-/* Cards */
-
-
-.card-modern{
-
-    background:white;
-
-    border-radius:25px;
-
-    padding:30px;
-
-    height:100%;
-
-    border:none;
-
-    box-shadow:
-    0 10px 30px rgba(0,0,0,.08);
-
-    transition:.3s;
-
-}
-
-
-
-.card-modern:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:
-    0 20px 40px rgba(0,87,184,.18);
-
-}
-
-
-
-.icon-box{
-
-    width:70px;
-    height:70px;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    border-radius:20px;
-
-    background:
-    linear-gradient(135deg,var(--primary),var(--secondary));
-
-    color:white;
-
-    font-size:30px;
-
-    margin-bottom:20px;
-
-}
-
-
-
-/* Glass cards */
-
-
-.glass{
-
-    background:
-    rgba(255,255,255,.15);
-
-    backdrop-filter:blur(10px);
-
-    border-radius:25px;
-
-    border:
-    1px solid rgba(255,255,255,.2);
-
-}
-
-
-
-/* Hero wave */
-
-
-.wave{
-
-    position:absolute;
-
-    bottom:-1px;
-
-    width:100%;
-
-}
-
-
-
-/* Animation */
-
-
-.fade-up{
-
-    animation:
-    fade .9s ease forwards;
-
-}
-
-
-
-@keyframes fade{
-
-from{
-
-opacity:0;
-
-transform:translateY(30px);
-
-}
-
-to{
-
-opacity:1;
-
-transform:translateY(0);
-
-}
-
-}
-
-
-
-/* Back to top */
-
-#topBtn{
-
-    position:fixed;
-
-    bottom:25px;
-
-    right:25px;
-
-    width:50px;
-
-    height:50px;
-
-    border-radius:50%;
-
-    border:none;
-
-    background:var(--primary);
-
-    color:white;
-
-    display:none;
-
-    z-index:999;
-
-}
-
-
-
-</style>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Communications Engineering | PSUT</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        :root {
+            --primary: #0057b8;
+            --secondary: #00a6fb;
+            --dark: #071a3d;
+            --light: #f5f9ff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: var(--light);
+            color: #222;
+        }
+
+        /* Scroll progress */
+
+        #progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 5px;
+            width: 0%;
+            background: linear-gradient(90deg, var(--secondary), var(--primary));
+            z-index: 9999;
+        }
+
+        /* Navbar */
+
+        .navbar {
+            transition: .4s;
+        }
+
+        .navbar.scrolled {
+            background: white !important;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, .1);
+        }
+
+        /* Added CSS for top club logo */
+        .nav-logo {
+            height: 40px;
+            width: auto;
+            border-radius: 6px;
+            background: white; /* gives a clean background around logo when transparent */
+            padding: 2px;
+        }
+
+        .nav-link {
+            font-weight: 500;
+        }
+
+        /* Hero */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #003b80, #0077e6, #00b4ff);
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 7vw, 5.5rem);
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        /* Floating circles */
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .12);
+            animation: float 8s infinite ease-in-out;
+        }
+
+        .c1 {
+            width: 250px;
+            height: 250px;
+            top: 10%;
+            left: 5%;
+        }
+
+        .c2 {
+            width: 350px;
+            height: 350px;
+            bottom: -100px;
+            right: 5%;
+        }
+
+        .c3 {
+            width: 120px;
+            height: 120px;
+            top: 30%;
+            right: 20%;
+        }
+
+        @keyframes float {
+            50% {
+                transform: translateY(-30px);
+            }
+        }
+
+        /* Buttons */
+
+        .btn-main {
+            background: white;
+            color: var(--primary);
+            border-radius: 50px;
+            padding: 14px 35px;
+            font-weight: bold;
+        }
+
+        .btn-main:hover {
+            background: #e8f4ff;
+        }
+
+        .btn-outline-light {
+            border-radius: 50px;
+            padding: 14px 35px;
+        }
+
+        /* Section styling */
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--dark);
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        /* Cards */
+
+        .card-modern {
+            background: white;
+            border-radius: 25px;
+            padding: 30px;
+            height: 100%;
+            border: none;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+            transition: .3s;
+        }
+
+        .card-modern:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 87, 184, .18);
+        }
+
+        .icon-box {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 20px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        /* Glass cards */
+
+        .glass {
+            background: rgba(255, 255, 255, .15);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            border: 1px solid rgba(255, 255, 255, .2);
+        }
+
+        /* Hero wave */
+
+        .wave {
+            position: absolute;
+            bottom: -1px;
+            width: 100%;
+        }
+
+        /* Animation */
+
+        .fade-up {
+            animation: fade .9s ease forwards;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Back to top */
+
+        #topBtn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            background: var(--primary);
+            color: white;
+            display: none;
+            z-index: 999;
+        }
+    </style>
 </head>
-
 
 <body>
 
-
-<div id="progress"></div>
-
-
-
-<!-- Navbar -->
-
-
-<nav class="navbar navbar-expand-lg fixed-top navbar-dark">
-
-<div class="container">
-
-
-<a class="navbar-brand fw-bold fs-4" href="#">
-
-    Communications Engineering
-
-</a>
-
-
-<button class="navbar-toggler"
-data-bs-toggle="collapse"
-data-bs-target="#menu">
-
-<span class="navbar-toggler-icon"></span>
-
-</button>
-
-
-<div class="collapse navbar-collapse" id="menu">
-
-
-<ul class="navbar-nav ms-auto">
-
-<li class="nav-item">
-<a class="nav-link" href="#about">Major</a>
-</li>
-
-
-<li class="nav-item">
-<a class="nav-link" href="#iot">IoT</a>
-</li>
-
-
-<li class="nav-item">
-<a class="nav-link" href="#careers">Careers</a>
-</li>
-
-
-<li class="nav-item">
-<a class="nav-link" href="#club">IoT Club</a>
-</li>
-
-
-</ul>
-
-
-</div>
-
-</div>
-
-</nav>
-
-
-
-
-<!-- HERO -->
-
-
-<section class="hero">
-
-
-<div class="circle c1"></div>
-
-<div class="circle c2"></div>
-
-<div class="circle c3"></div>
-
-
-
-<div class="container fade-up">
-
-
-<h1>
-Communications Engineering
-</h1>
-
-
-<h3 class="mt-3">
-Princess Sumaya University for Technology
-</h3>
-
-
-<p class="mt-4">
-
-Connecting people, devices, and the future through wireless communication,
-IoT, artificial intelligence, and emerging technologies.
-
-</p>
-
-
-
-<div class="mt-5">
-
-<a href="#about"
-class="btn btn-main me-3">
-
-Explore The Major
-
-</a>
-
-
-<a href="#club"
-class="btn btn-outline-light">
-
-Meet The IoT Club
-
-</a>
-
-
-</div>
-
-
-</div>
-
-
-
-<!-- Wave -->
-
-
-<svg class="wave"
-viewBox="0 0 1440 150"
-xmlns="http://www.w3.org/2000/svg">
-
-<path fill="#f5f9ff"
-d="
-M0,80
-C300,180 500,0 800,60
-C1100,120 1250,150 1440,40
-L1440,150
-L0,150
-Z">
-</path>
-
-</svg>
-
-
-</section>
-<!-- ABOUT COMMUNICATIONS ENGINEERING -->
-
-<section id="about" class="section">
-
-<div class="container">
-
-
-<div class="section-title">
-
-<h2>What is Communications Engineering?</h2>
-
-<p>
-The technology behind the connected world
-</p>
-
-</div>
-
-
-
-<div class="row g-4">
-
-
-<div class="col-md-6">
-
-<div class="card-modern">
-
-<div class="icon-box">
-<i class="bi bi-broadcast"></i>
-</div>
-
-<h4>Wireless Communications</h4>
-
-<p>
-Learn how information travels wirelessly through technologies such as Wi-Fi,
-Bluetooth, 4G, 5G, and future communication networks.
-</p>
-
-</div>
-
-</div>
-
-
-
-
-<div class="col-md-6">
-
-<div class="card-modern">
-
-<div class="icon-box">
-<i class="bi bi-graph-up"></i>
-</div>
-
-<h4>Signal Processing</h4>
-
-<p>
-Analyze and improve signals such as audio, images, videos, and communication
-data using mathematical algorithms.
-</p>
-
-</div>
-
-</div>
-
-
-
-
-
-<div class="col-md-6">
-
-<div class="card-modern">
-
-<div class="icon-box">
-<i class="bi bi-cpu"></i>
-</div>
-
-<h4>Electronics</h4>
-
-<p>
-Understand the circuits and hardware components that form the foundation of
-modern communication systems.
-</p>
-
-</div>
-
-</div>
-
-
-
-
-
-<div class="col-md-6">
-
-<div class="card-modern">
-
-<div class="icon-box">
-<i class="bi bi-router"></i>
-</div>
-
-<h4>Networking</h4>
-
-<p>
-Explore how computers and devices communicate through local and global
-networks such as the Internet.
-</p>
-
-</div>
-
-</div>
-
-
-
-
-<div class="col-md-6">
-
-<div class="card-modern">
-
-<div class="icon-box">
-<i class="bi bi-motherboard"></i>
-</div>
-
-<h4>Embedded Systems</h4>
-
-<p>
-Design intelligent devices by combining hardware, programming, and
-microcontrollers.
-</p>
-
-</div>
-
-</div>
-
-
-
-
-<div class="col-md-6">
-
-<div class="card-modern">
-
-<div class="icon-box">
-<i class="bi bi-robot"></i>
-</div>
-
-<h4>Artificial Intelligence</h4>
-
-<p>
-Apply AI and machine learning techniques in communication systems and smart
-technologies.
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-
-
-<!-- IOT -->
-
-<section id="iot" class="section bg-white">
-
-<div class="container">
-
-
-<div class="section-title">
-
-<h2>What is IoT?</h2>
-
-<p>
-Connecting everyday devices to create smarter systems
-</p>
-
-</div>
-
-
-
-<div class="row align-items-center g-5">
-
-
-<div class="col-lg-6">
-
-
-<h3>
-Internet of Things
-</h3>
-
-
-<p>
-
-The Internet of Things (IoT) is the technology that allows physical devices
-to collect data, communicate, and perform intelligent actions through the
-Internet.
-
-</p>
-
-
-<p>
-
-IoT combines sensors, embedded systems, wireless communication, cloud
-computing, and artificial intelligence to build smart solutions.
-
-</p>
-
-
-</div>
-
-
-
-
-<div class="col-lg-6">
-
-
-<div class="row g-3">
-
-
-<div class="col-6">
-
-<div class="card-modern text-center">
-
-<i class="bi bi-house fs-1 text-primary"></i>
-
-<h5>Smart Homes</h5>
-
-</div>
-
-</div>
-
-
-
-<div class="col-6">
-
-<div class="card-modern text-center">
-
-<i class="bi bi-heart-pulse fs-1 text-primary"></i>
-
-<h5>Healthcare</h5>
-
-</div>
-
-</div>
-
-
-
-
-<div class="col-6">
-
-<div class="card-modern text-center">
-
-<i class="bi bi-tree fs-1 text-primary"></i>
-
-<h5>Agriculture</h5>
-
-</div>
-
-</div>
-
-
-
-
-<div class="col-6">
-
-<div class="card-modern text-center">
-
-<i class="bi bi-building fs-1 text-primary"></i>
-
-<h5>Smart Cities</h5>
-
-</div>
-
-</div>
-
-
-
-<div class="col-6">
-
-<div class="card-modern text-center">
-
-<i class="bi bi-gear fs-1 text-primary"></i>
-
-<h5>Industry 4.0</h5>
-
-</div>
-
-</div>
-
-
-
-
-<div class="col-6">
-
-<div class="card-modern text-center">
-
-<i class="bi bi-car-front fs-1 text-primary"></i>
-
-<h5>Connected Cars</h5>
-
-</div>
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-
-
-<!-- CAREERS -->
-
-
-<section id="careers" class="section">
-
-
-<div class="container">
-
-
-<div class="section-title">
-
-<h2>Career Opportunities</h2>
-
-<p>
-Where Communications Engineering can take you
-</p>
-
-</div>
-
-
-
-
-<div class="row g-4">
-
-
-
-<div class="col-md-6">
-
-<div class="card-modern">
-
-<h4>Telecommunications Engineer</h4>
-
-<p>
-Design and maintain communication networks including mobile networks,
-fiber optics, and Internet infrastructure.
-</p>
-
-</div>
-
-</div>
-
-
-
-
-<div class="col-md-6">
-
-<div class="card-modern">
-
-<h4>RF Engineer</h4>
-
-<p>
-Develop wireless systems, antennas, and radio frequency solutions used in
-mobile networks, satellites, and radar.
-</p>
-
-</div>
-
-</div>
-
-
-
-
-<div class="col-md-6">
-
-<div class="card-modern">
-
-<h4>Network Engineer</h4>
-
-<p>
-Build and manage secure computer networks that allow organizations and
-devices to exchange information.
-</p>
-
-</div>
-
-</div>
-
-
-
-
-<div class="col-md-6">
-
-<div class="card-modern">
-
-<h4>Embedded Systems Engineer</h4>
-
-<p>
-Create intelligent electronic products by programming and designing
-hardware-based systems.
-</p>
-
-</div>
-
-</div>
-
-
-
-
-<div class="col-md-6">
-
-<div class="card-modern">
-
-<h4>IoT Engineer</h4>
-
-<p>
-Develop smart connected systems using sensors, microcontrollers, cloud
-platforms, and wireless communication.
-</p>
-
-</div>
-
-</div>
-
-
-
-
-<div class="col-md-6">
-
-<div class="card-modern">
-
-<h4>Satellite Communications Engineer</h4>
-
-<p>
-Work on satellite networks used for navigation, broadcasting, weather
-monitoring, and global connectivity.
-</p>
-
-</div>
-
-</div>
-
-
-
-
-<div class="col-md-6">
-
-<div class="card-modern">
-
-<h4>Signal Processing Engineer</h4>
-
-<p>
-Develop algorithms that improve communication signals, images, audio, and
-data processing systems.
-</p>
-
-</div>
-
-</div>
-
-
-
-
-<div class="col-md-6">
-
-<div class="card-modern">
-
-<h4>Research & Development Engineer</h4>
-
-<p>
-Develop future technologies such as 6G, AI-powered communications, and
-advanced wireless systems.
-</p>
-
-</div>
-
-</div>
-
-
-
-</div>
-
-</div>
-
-
-</section>
-
-
-
-
-
-<!-- STUDY TIMELINE -->
-
-
-<section class="section bg-white">
-
-
-<div class="container">
-
-
-<div class="section-title">
-
-<h2>What You'll Study (Expected timeline)</h2>
-
-</div>
-
-
-
-<div class="row g-4 text-center">
-
-
-<div class="col-md-3">
-
-<div class="card-modern">
-
-<h3>Year 1</h3>
-
-<p>
-Programming<br>
-Calculus<br>
-Physics
-</p>
-
-</div>
-
-</div>
-
-
-
-<div class="col-md-3">
-
-<div class="card-modern">
-
-<h3>Year 2</h3>
-
-<p>
-Electrical Circuits<br>
-Electronics<br>
-Engineering Mathematics<br>
-Programming Applications in Engineering
-</p>
-
-</div>
-
-</div>
-
-
-
-<div class="col-md-3">
-
-<div class="card-modern">
-
-<h3>Year 3</h3>
-
-<p>
-Signals and Systems<br>
-Communication Systems<br>
-Database Fundamentals<br>
-Electromagnetics<br>
-IoT Applications
-</p>
-
-</div>
-
-</div>
-
-
-
-<div class="col-md-3">
-
-<div class="card-modern">
-
-<h3>Year 4</h3>
-
-<p>
-Mobile Communications<br>
-AI Applications<br>
-Antenna Design<br>
-Embedded Systems<br>
-IoT Sensor Networks
-</p>
-
-</div>
-
-</div>
-
-<div class="col-md-3">
-
-<div class="card-modern">
-
-<h3>Year 5</h3>
-
-<p>
-Graduation Project<br>
-IoT security<br>
-Specialization<br>
-Research
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-
-</div>
-
-</section>
-
-
-
-
-
-<!-- CLUB -->
-
-
-<section id="club" class="section">
-
-
-<div class="container">
-
-
-<div class="section-title">
-
-<h2>IoT Club</h2>
-
-<p>
-Learn, build, and innovate beyond the classroom
-</p>
-
-</div>
-
-
-
-<div class="row g-4">
-
-
-<div class="col-md-3">
-
-<div class="card-modern text-center">
-
-<i class="bi bi-tools fs-1 text-primary"></i>
-
-<h5>Workshops</h5>
-
-<p>
-Hands-on learning with Arduino, ESP32, Arduino, and sensors.
-</p>
-
-</div>
-
-</div>
-
-
-
-
-<div class="col-md-3">
-
-<div class="card-modern text-center">
-
-<i class="bi bi-trophy fs-1 text-primary"></i>
-
-<h5>Competitions</h5>
-
-<p>
-Participate in technical challenges and engineering competitions.
-</p>
-
-</div>
-
-</div>
-
-
-
-
-<div class="col-md-3">
-
-<div class="card-modern text-center">
-
-<i class="bi bi-lightbulb fs-1 text-primary"></i>
-
-<h5>Projects</h5>
-
-<p>
-Build smart systems and real-world IoT solutions.
-</p>
-
-</div>
-
-</div>
-
-
-
-
-<div class="col-md-3">
-
-<div class="card-modern text-center">
-
-<i class="bi bi-people fs-1 text-primary"></i>
-
-<h5>Industry Talks</h5>
-
-<p>
-Connect with engineers and technology professionals.
-</p>
-
-</div>
-
-</div>
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-<!-- CTA -->
-
-
-<section class="section text-center text-white"
-style="background:linear-gradient(135deg,#0057b8,#00a6fb)">
-
-
-<div class="container">
-
-
-<h2>
-Interested in the Future of Technology?
-</h2>
-
-
-<p class="lead">
-Do not hesitate to major in Communications Engineering / IoT at PSUT!!!
-</p>
-
-
-</div>
-
-
-</section>
-
-
-
-
-<footer class="bg-dark text-white text-center p-4">
-
-
-<h4>
-Communications Engineering @ PSUT
-</h4>
-
-
-<p>
-
-<a href=https://www.instagram.com/iot.psut?igsh=MXcxeHkwcWkwMHBkdQ==" target="_blank">
-Instagram
-</a>
-
-|
-
-<a href="https://www.linkedin.com/company/iot-club-psut/" target="_blank">
-LinkedIn
-</a>
-
-|
-
-<a href="https://www.psut.edu.jo/en/program/bachelor-degree-in-communications-engineering-iot" target="_blank">
-PSUT Website
-</a>
-
-</p>
-
-
-</footer>
-
-
-
-
-
-<button id="topBtn">
-
-<i class="bi bi-arrow-up"></i>
-
-</button>
-
-
-
-
-
-<script>
-
-
-// navbar effect
-
-window.addEventListener("scroll",()=>{
-
-
-let nav=document.querySelector(".navbar");
-
-if(window.scrollY>50)
-
-nav.classList.add("scrolled");
-
-else
-
-nav.classList.remove("scrolled");
-
-});
-
-
-
-
-// progress bar
-
-window.addEventListener("scroll",()=>{
-
-let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
-
-let progress=(window.scrollY/height)*100;
-
-document.getElementById("progress").style.width=progress+"%";
-
-});
-
-
-
-
-// back to top
-
-let btn=document.getElementById("topBtn");
-
-
-window.addEventListener("scroll",()=>{
-
-if(window.scrollY>400)
-
-btn.style.display="block";
-
-else
-
-btn.style.display="none";
-
-});
-
-
-btn.onclick=()=>{
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
-
-};
-
-
-</script>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-
-
+    <div id="progress"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4 d-flex align-items-center gap-2" href="#">
+                <!-- Club Logo added here -->
+                <img src="depositphotos_245204514-stock-illustration-iot-internet-of-things-logo.jpg" alt="IoT Club Logo" class="nav-logo">
+                <span>Communications Engineering</span>
+            </a>
+
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Major</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#iot">IoT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#careers">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#club">IoT Club</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="circle c1"></div>
+        <div class="circle c2"></div>
+        <div class="circle c3"></div>
+
+        <div class="container fade-up">
+            <!-- Optional: Hero top badge logo display -->
+            <div class="mb-3">
+                <img src="depositphotos_245204514-stock-illustration-iot-internet-of-things-logo.jpg" alt="IoT Club Logo" style="max-width: 110px; border-radius: 18px; box-shadow: 0 8px 25px rgba(0,0,0,0.2);">
+            </div>
+
+            <h1>Communications Engineering</h1>
+            <h3 class="mt-3">Princess Sumaya University for Technology</h3>
+            <p class="mt-4">
+                Connecting people, devices, and the future through wireless communication,
+                IoT, artificial intelligence, and emerging technologies.
+            </p>
+
+            <div class="mt-5">
+                <a href="#about" class="btn btn-main me-3">Explore The Major</a>
+                <a href="#club" class="btn btn-outline-light">Meet The IoT Club</a>
+            </div>
+        </div>
+
+        <!-- Wave -->
+        <svg class="wave" viewBox="0 0 1440 150" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#f5f9ff" d="M0,80 C300,180 500,0 800,60 C1100,120 1250,150 1440,40 L1440,150 L0,150 Z"></path>
+        </svg>
+    </section>
+
+    <!-- ABOUT COMMUNICATIONS ENGINEERING -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>What is Communications Engineering?</h2>
+                <p>The technology behind the connected world</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card-modern">
+                        <div class="icon-box"><i class="bi bi-broadcast"></i></div>
+                        <h4>Wireless Communications</h4>
+                        <p>Learn how information travels wirelessly through technologies such as Wi-Fi, Bluetooth, 4G, 5G, and future communication networks.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card-modern">
+                        <div class="icon-box"><i class="bi bi-graph-up"></i></div>
+                        <h4>Signal Processing</h4>
+                        <p>Analyze and improve signals such as audio, images, videos, and communication data using mathematical algorithms.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card-modern">
+                        <div class="icon-box"><i class="bi bi-cpu"></i></div>
+                        <h4>Electronics</h4>
+                        <p>Understand the circuits and hardware components that form the foundation of modern communication systems.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card-modern">
+                        <div class="icon-box"><i class="bi bi-router"></i></div>
+                        <h4>Networking</h4>
+                        <p>Explore how computers and devices communicate through local and global networks such as the Internet.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card-modern">
+                        <div class="icon-box"><i class="bi bi-motherboard"></i></div>
+                        <h4>Embedded Systems</h4>
+                        <p>Design intelligent devices by combining hardware, programming, and microcontrollers.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card-modern">
+                        <div class="icon-box"><i class="bi bi-robot"></i></div>
+                        <h4>Artificial Intelligence</h4>
+                        <p>Apply AI and machine learning techniques in communication systems and smart technologies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IOT -->
+    <section id="iot" class="section bg-white">
+        <div class="container">
+            <div class="section-title">
+                <h2>What is IoT?</h2>
+                <p>Connecting everyday devices to create smarter systems</p>
+            </div>
+
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <h3>Internet of Things</h3>
+                    <p>The Internet of Things (IoT) is the technology that allows physical devices to collect data, communicate, and perform intelligent actions through the Internet.</p>
+                    <p>IoT combines sensors, embedded systems, wireless communication, cloud computing, and artificial intelligence to build smart solutions.</p>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <div class="card-modern text-center">
+                                <i class="bi bi-house fs-1 text-primary"></i>
+                                <h5>Smart Homes</h5>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card-modern text-center">
+                                <i class="bi bi-heart-pulse fs-1 text-primary"></i>
+                                <h5>Healthcare</h5>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card-modern text-center">
+                                <i class="bi bi-tree fs-1 text-primary"></i>
+                                <h5>Agriculture</h5>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card-modern text-center">
+                                <i class="bi bi-building fs-1 text-primary"></i>
+                                <h5>Smart Cities</h5>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card-modern text-center">
+                                <i class="bi bi-gear fs-1 text-primary"></i>
+                                <h5>Industry 4.0</h5>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card-modern text-center">
+                                <i class="bi bi-car-front fs-1 text-primary"></i>
+                                <h5>Connected Cars</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAREERS -->
+    <section id="careers" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Career Opportunities</h2>
+                <p>Where Communications Engineering can take you</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card-modern">
+                        <h4>Telecommunications Engineer</h4>
+                        <p>Design and maintain communication networks including mobile networks, fiber optics, and Internet infrastructure.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-modern">
+                        <h4>RF Engineer</h4>
+                        <p>Develop wireless systems, antennas, and radio frequency solutions used in mobile networks, satellites, and radar.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-modern">
+                        <h4>Network Engineer</h4>
+                        <p>Build and manage secure computer networks that allow organizations and devices to exchange information.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-modern">
+                        <h4>Embedded Systems Engineer</h4>
+                        <p>Create intelligent electronic products by programming and designing hardware-based systems.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-modern">
+                        <h4>IoT Engineer</h4>
+                        <p>Develop smart connected systems using sensors, microcontrollers, cloud platforms, and wireless communication.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-modern">
+                        <h4>Satellite Communications Engineer</h4>
+                        <p>Work on satellite networks used for navigation, broadcasting, weather monitoring, and global connectivity.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-modern">
+                        <h4>Signal Processing Engineer</h4>
+                        <p>Develop algorithms that improve communication signals, images, audio, and data processing systems.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card-modern">
+                        <h4>Research & Development Engineer</h4>
+                        <p>Develop future technologies such as 6G, AI-powered communications, and advanced wireless systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STUDY TIMELINE -->
+    <section class="section bg-white">
+        <div class="container">
+            <div class="section-title">
+                <h2>What You'll Study (Expected timeline)</h2>
+            </div>
+
+            <div class="row g-4 text-center">
+                <div class="col-md-3">
+                    <div class="card-modern">
+                        <h3>Year 1</h3>
+                        <p>Programming<br>Calculus<br>Physics</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-modern">
+                        <h3>Year 2</h3>
+                        <p>Electrical Circuits<br>Electronics<br>Engineering Mathematics<br>Programming Applications in Engineering</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-modern">
+                        <h3>Year 3</h3>
+                        <p>Signals and Systems<br>Communication Systems<br>Database Fundamentals<br>Electromagnetics<br>IoT Applications</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-modern">
+                        <h3>Year 4</h3>
+                        <p>Mobile Communications<br>AI Applications<br>Antenna Design<br>Embedded Systems<br>IoT Sensor Networks</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-modern">
+                        <h3>Year 5</h3>
+                        <p>Graduation Project<br>IoT security<br>Specialization<br>Research</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLUB -->
+    <section id="club" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>IoT Club</h2>
+                <p>Learn, build, and innovate beyond the classroom</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="card-modern text-center">
+                        <i class="bi bi-tools fs-1 text-primary"></i>
+                        <h5>Workshops</h5>
+                        <p>Hands-on learning with Arduino, ESP32, Arduino, and sensors.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-modern text-center">
+                        <i class="bi bi-trophy fs-1 text-primary"></i>
+                        <h5>Competitions</h5>
+                        <p>Participate in technical challenges and engineering competitions.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-modern text-center">
+                        <i class="bi bi-lightbulb fs-1 text-primary"></i>
+                        <h5>Projects</h5>
+                        <p>Build smart systems and real-world IoT solutions.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card-modern text-center">
+                        <i class="bi bi-people fs-1 text-primary"></i>
+                        <h5>Industry Talks</h5>
+                        <p>Connect with engineers and technology professionals.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section text-center text-white" style="background:linear-gradient(135deg,#0057b8,#00a6fb)">
+        <div class="container">
+            <h2>Interested in the Future of Technology?</h2>
+            <p class="lead">Do not hesitate to major in Communications Engineering / IoT at PSUT!!!</p>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center p-4">
+        <h4>Communications Engineering @ PSUT</h4>
+        <p>
+            <a href="https://www.instagram.com/iot.psut?igsh=MXcxeHkwcWkwMHBkdQ==" target="_blank">Instagram</a>
+            |
+            <a href="https://www.linkedin.com/company/iot-club-psut/" target="_blank">LinkedIn</a>
+            |
+            <a href="https://www.psut.edu.jo/en/program/bachelor-degree-in-communications-engineering-iot" target="_blank">PSUT Website</a>
+        </p>
+    </footer>
+
+    <button id="topBtn">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script>
+        // navbar effect
+        window.addEventListener("scroll", () => {
+            let nav = document.querySelector(".navbar");
+            if (window.scrollY > 50)
+                nav.classList.add("scrolled");
+            else
+                nav.classList.remove("scrolled");
+        });
+
+        // progress bar
+        window.addEventListener("scroll", () => {
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let progress = (window.scrollY / height) * 100;
+            document.getElementById("progress").style.width = progress + "%";
+        });
+
+        // back to top
+        let btn = document.getElementById("topBtn");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 400)
+                btn.style.display = "block";
+            else
+                btn.style.display = "none";
+        });
+
+        btn.onclick = () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
