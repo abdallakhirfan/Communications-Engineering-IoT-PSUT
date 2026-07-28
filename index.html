@@ -54,12 +54,12 @@
             box-shadow: 0 5px 20px rgba(0, 0, 0, .1);
         }
 
-        /* Added CSS for top club logo */
+        /* Club Logo Styling */
         .nav-logo {
             height: 40px;
             width: auto;
             border-radius: 6px;
-            background: white; /* gives a clean background around logo when transparent */
+            background: white;
             padding: 2px;
         }
 
@@ -259,8 +259,8 @@
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
         <div class="container">
             <a class="navbar-brand fw-bold fs-4 d-flex align-items-center gap-2" href="#">
-                <!-- Club Logo added here -->
-                <img src="depositphotos_245204514-stock-illustration-iot-internet-of-things-logo.jpg" alt="IoT Club Logo" class="nav-logo">
+                <!-- Path points to images folder -->
+                <img src="./images/logo.jpg" alt="IoT Club Logo" class="nav-logo">
                 <span>Communications Engineering</span>
             </a>
 
@@ -294,11 +294,6 @@
         <div class="circle c3"></div>
 
         <div class="container fade-up">
-            <!-- Optional: Hero top badge logo display -->
-            <div class="mb-3">
-                <img src="depositphotos_245204514-stock-illustration-iot-internet-of-things-logo.jpg" alt="IoT Club Logo" style="max-width: 110px; border-radius: 18px; box-shadow: 0 8px 25px rgba(0,0,0,0.2);">
-            </div>
-
             <h1>Communications Engineering</h1>
             <h3 class="mt-3">Princess Sumaya University for Technology</h3>
             <p class="mt-4">
@@ -329,7 +324,9 @@
             <div class="row g-4">
                 <div class="col-md-6">
                     <div class="card-modern">
-                        <div class="icon-box"><i class="bi bi-broadcast"></i></div>
+                        <div class="icon-box">
+                            <i class="bi bi-broadcast"></i>
+                        </div>
                         <h4>Wireless Communications</h4>
                         <p>Learn how information travels wirelessly through technologies such as Wi-Fi, Bluetooth, 4G, 5G, and future communication networks.</p>
                     </div>
@@ -337,7 +334,9 @@
 
                 <div class="col-md-6">
                     <div class="card-modern">
-                        <div class="icon-box"><i class="bi bi-graph-up"></i></div>
+                        <div class="icon-box">
+                            <i class="bi bi-graph-up"></i>
+                        </div>
                         <h4>Signal Processing</h4>
                         <p>Analyze and improve signals such as audio, images, videos, and communication data using mathematical algorithms.</p>
                     </div>
@@ -345,7 +344,9 @@
 
                 <div class="col-md-6">
                     <div class="card-modern">
-                        <div class="icon-box"><i class="bi bi-cpu"></i></div>
+                        <div class="icon-box">
+                            <i class="bi bi-cpu"></i>
+                        </div>
                         <h4>Electronics</h4>
                         <p>Understand the circuits and hardware components that form the foundation of modern communication systems.</p>
                     </div>
@@ -353,7 +354,9 @@
 
                 <div class="col-md-6">
                     <div class="card-modern">
-                        <div class="icon-box"><i class="bi bi-router"></i></div>
+                        <div class="icon-box">
+                            <i class="bi bi-router"></i>
+                        </div>
                         <h4>Networking</h4>
                         <p>Explore how computers and devices communicate through local and global networks such as the Internet.</p>
                     </div>
@@ -361,7 +364,9 @@
 
                 <div class="col-md-6">
                     <div class="card-modern">
-                        <div class="icon-box"><i class="bi bi-motherboard"></i></div>
+                        <div class="icon-box">
+                            <i class="bi bi-motherboard"></i>
+                        </div>
                         <h4>Embedded Systems</h4>
                         <p>Design intelligent devices by combining hardware, programming, and microcontrollers.</p>
                     </div>
@@ -369,7 +374,9 @@
 
                 <div class="col-md-6">
                     <div class="card-modern">
-                        <div class="icon-box"><i class="bi bi-robot"></i></div>
+                        <div class="icon-box">
+                            <i class="bi bi-robot"></i>
+                        </div>
                         <h4>Artificial Intelligence</h4>
                         <p>Apply AI and machine learning techniques in communication systems and smart technologies.</p>
                     </div>
@@ -401,30 +408,35 @@
                                 <h5>Smart Homes</h5>
                             </div>
                         </div>
+
                         <div class="col-6">
                             <div class="card-modern text-center">
                                 <i class="bi bi-heart-pulse fs-1 text-primary"></i>
                                 <h5>Healthcare</h5>
                             </div>
                         </div>
+
                         <div class="col-6">
                             <div class="card-modern text-center">
                                 <i class="bi bi-tree fs-1 text-primary"></i>
                                 <h5>Agriculture</h5>
                             </div>
                         </div>
+
                         <div class="col-6">
                             <div class="card-modern text-center">
                                 <i class="bi bi-building fs-1 text-primary"></i>
                                 <h5>Smart Cities</h5>
                             </div>
                         </div>
+
                         <div class="col-6">
                             <div class="card-modern text-center">
                                 <i class="bi bi-gear fs-1 text-primary"></i>
                                 <h5>Industry 4.0</h5>
                             </div>
                         </div>
+
                         <div class="col-6">
                             <div class="card-modern text-center">
                                 <i class="bi bi-car-front fs-1 text-primary"></i>
@@ -452,42 +464,49 @@
                         <p>Design and maintain communication networks including mobile networks, fiber optics, and Internet infrastructure.</p>
                     </div>
                 </div>
+
                 <div class="col-md-6">
                     <div class="card-modern">
                         <h4>RF Engineer</h4>
                         <p>Develop wireless systems, antennas, and radio frequency solutions used in mobile networks, satellites, and radar.</p>
                     </div>
                 </div>
+
                 <div class="col-md-6">
                     <div class="card-modern">
                         <h4>Network Engineer</h4>
                         <p>Build and manage secure computer networks that allow organizations and devices to exchange information.</p>
                     </div>
                 </div>
+
                 <div class="col-md-6">
                     <div class="card-modern">
                         <h4>Embedded Systems Engineer</h4>
                         <p>Create intelligent electronic products by programming and designing hardware-based systems.</p>
                     </div>
                 </div>
+
                 <div class="col-md-6">
                     <div class="card-modern">
                         <h4>IoT Engineer</h4>
                         <p>Develop smart connected systems using sensors, microcontrollers, cloud platforms, and wireless communication.</p>
                     </div>
                 </div>
+
                 <div class="col-md-6">
                     <div class="card-modern">
                         <h4>Satellite Communications Engineer</h4>
                         <p>Work on satellite networks used for navigation, broadcasting, weather monitoring, and global connectivity.</p>
                     </div>
                 </div>
+
                 <div class="col-md-6">
                     <div class="card-modern">
                         <h4>Signal Processing Engineer</h4>
                         <p>Develop algorithms that improve communication signals, images, audio, and data processing systems.</p>
                     </div>
                 </div>
+
                 <div class="col-md-6">
                     <div class="card-modern">
                         <h4>Research & Development Engineer</h4>
@@ -512,24 +531,28 @@
                         <p>Programming<br>Calculus<br>Physics</p>
                     </div>
                 </div>
+
                 <div class="col-md-3">
                     <div class="card-modern">
                         <h3>Year 2</h3>
                         <p>Electrical Circuits<br>Electronics<br>Engineering Mathematics<br>Programming Applications in Engineering</p>
                     </div>
                 </div>
+
                 <div class="col-md-3">
                     <div class="card-modern">
                         <h3>Year 3</h3>
                         <p>Signals and Systems<br>Communication Systems<br>Database Fundamentals<br>Electromagnetics<br>IoT Applications</p>
                     </div>
                 </div>
+
                 <div class="col-md-3">
                     <div class="card-modern">
                         <h3>Year 4</h3>
                         <p>Mobile Communications<br>AI Applications<br>Antenna Design<br>Embedded Systems<br>IoT Sensor Networks</p>
                     </div>
                 </div>
+
                 <div class="col-md-3">
                     <div class="card-modern">
                         <h3>Year 5</h3>
@@ -556,6 +579,7 @@
                         <p>Hands-on learning with Arduino, ESP32, Arduino, and sensors.</p>
                     </div>
                 </div>
+
                 <div class="col-md-3">
                     <div class="card-modern text-center">
                         <i class="bi bi-trophy fs-1 text-primary"></i>
@@ -563,6 +587,7 @@
                         <p>Participate in technical challenges and engineering competitions.</p>
                     </div>
                 </div>
+
                 <div class="col-md-3">
                     <div class="card-modern text-center">
                         <i class="bi bi-lightbulb fs-1 text-primary"></i>
@@ -570,6 +595,7 @@
                         <p>Build smart systems and real-world IoT solutions.</p>
                     </div>
                 </div>
+
                 <div class="col-md-3">
                     <div class="card-modern text-center">
                         <i class="bi bi-people fs-1 text-primary"></i>
