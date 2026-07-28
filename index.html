@@ -54,15 +54,6 @@
             box-shadow: 0 5px 20px rgba(0, 0, 0, .1);
         }
 
-        /* Club Logo Styling */
-        .nav-logo {
-            height: 40px;
-            width: auto;
-            border-radius: 6px;
-            background: white;
-            padding: 2px;
-        }
-
         .nav-link {
             font-weight: 500;
         }
@@ -258,10 +249,8 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
         <div class="container">
-            <a class="navbar-brand fw-bold fs-4 d-flex align-items-center gap-2" href="#">
-                <!-- Path points to images folder -->
-                <img src="./images/IoT_club_logo.jpg" alt="IoT Club Logo" class="nav-logo">
-                <span>Communications Engineering</span>
+            <a class="navbar-brand fw-bold fs-4" href="#">
+                Communications Engineering
             </a>
 
             <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -301,9 +290,14 @@
                 IoT, artificial intelligence, and emerging technologies.
             </p>
 
-            <div class="mt-5">
-                <a href="#about" class="btn btn-main me-3">Explore The Major</a>
-                <a href="#club" class="btn btn-outline-light">Meet The IoT Club</a>
+            <!-- Responsive Button Container -->
+            <div class="mt-5 d-flex flex-column flex-sm-row justify-content-center align-items-stretch align-items-sm-center gap-3 px-3 px-sm-0">
+                <a href="#about" class="btn btn-main">
+                    Explore The Major
+                </a>
+                <a href="#club" class="btn btn-outline-light">
+                    Meet The IoT Club
+                </a>
             </div>
         </div>
 
